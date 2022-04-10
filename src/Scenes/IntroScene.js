@@ -27,7 +27,7 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
     const skipButton = useRef();
     const animationBoyRef = useRef();
     const excellentRef = useRef();
-
+    const nextImgRef = useRef();
 
     function returnOption() {
         return {
@@ -85,7 +85,7 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
         animationBoyRef.current.stop();
         panelRef.current.className = 'aniObject'
         panelRef.current.style.display = 'inline-block'
-        
+
         clearTimeout(timerList[0])
         clearTimeout(timerList[1])
         audioList.bodyAudio.pause()
@@ -98,6 +98,8 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
             panelRef.current.style.pointerEvents = 'none'
 
             timerList[3] = setTimeout(() => {
+                nextImgRef.current.src = prePathUrl() + 'images/Buttons/Next_blue.svg'
+
                 // introBoy.current.className = 'show'
                 timerList[4] = setTimeout(() => {
                     audioList.subBodyAudio1.play();
@@ -192,7 +194,7 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
         // timerList[12] = setTimeout(() => {
         //     introBoy.current.style.left = _geo.width * 0.3 + _geo.left + 'px'
         // }, 500);
-  
+
         // startRepeartInterval(audioList.repeatAudio);
     }
 
@@ -236,7 +238,9 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
                     right: "2%"
                     , bottom: "5%", cursor: "pointer",
                 }}>
-                <img draggable={false}
+                <img
+                    ref={nextImgRef}
+                    draggable={false}
                     width={"100%"}
                     src={prePathUrl() + 'images/Buttons/Skip_blue.svg'}
                 />
