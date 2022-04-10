@@ -642,7 +642,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
     function playAnimation(index) {
         // setMuteBG(true)
 
-        if(doneList.length == 0 && !isStarted) {
+        if (doneList.length == 0 && !isStarted) {
             clickedFirst()
             isStarted = true;
         }

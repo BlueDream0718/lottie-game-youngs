@@ -60,9 +60,9 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
         }, 2000);
 
 
-        // setTimeout(() => {
-        setShowBoard(true)
-        // }, 800);
+        setTimeout(() => {
+            setShowBoard(true)
+        }, 1000);
 
         return () => {
 
@@ -150,7 +150,7 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
             setTimeout(() => {
                 startRepeartInterval(audioList.repeatAudio);
                 panelRef.current.style.pointerEvents = ''
-            }, 800);
+            }, 1000);
         }
     }
 
@@ -199,12 +199,7 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
     }
 
     return (
-        <div className="aniObject"  >
-
-
-
-
-
+        <div className="aniObjectDelay"  >
             {
                 isShowBoard
                 &&

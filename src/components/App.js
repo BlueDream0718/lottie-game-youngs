@@ -61,7 +61,7 @@ const App = React.forwardRef(({ geo, _setBackground, _startTransition, baseGeo, 
     let sendNum = -1;
     if (judgeNum == 0)
       sendNum = 0;
-    if (transitionSceneList.includes(judgeNum))
+    if (judgeNum == 1)
       sendNum = 1;    //mean - transition
     if (judgeNum != backgroundImageIndex) {
       backgroundImageIndex = judgeNum;
@@ -110,13 +110,13 @@ const App = React.forwardRef(({ geo, _setBackground, _startTransition, baseGeo, 
 
   return (
     <div >
-      <div className={_isBackloaded ? '' : 'hide'}>
-        <Switch test={index}>
-          <Scene1 key={0} nextFunc={nextFunc} _baseGeo={baseGeo} _geo={__geo} value={0} />
-          <Scene2 key={1} nextFunc={nextFunc} setMuteBG={setMuteBG} _baseGeo={baseGeo} _geo={__geo} value={1} />
-          <Scene16 key={2} nextFunc={goHome} _baseGeo={baseGeo} _geo={__geo} value={2} />
-        </Switch>
-      </div>
+      {/* <div className={_isBackloaded ? '' : 'hide'}> */}
+      <Switch test={index}>
+        <Scene1 key={0} nextFunc={nextFunc} _baseGeo={baseGeo} _geo={__geo} value={0} />
+        <Scene2 key={1} nextFunc={nextFunc} setMuteBG={setMuteBG} _baseGeo={baseGeo} _geo={__geo} value={1} />
+        <Scene16 key={2} nextFunc={goHome} _baseGeo={baseGeo} _geo={__geo} value={2} />
+      </Switch>
+      {/* </div> */}
       <MusicButton ref={musicRef} _geo={__geo} backAudio={audioList.backAudio} />
     </div >
   );

@@ -290,12 +290,14 @@ export default function BaseShot() {
             // 1 - center center, 2 - center bottom , 3-left center ,  4 - left bottom, 5 - left top , 6-center top
             // if (optionNum != 1)  // transition scenes
             myImage1.current.className = 'background-move'
+
             myImage1.current.src = prePathUrl() + "images/SB_31_BG/" + oldBackgroundImage + ".svg";
+
             setSuitableBackground(backState);
 
             setTimeout(() => {
                 if (oldBackgroundImage == 'SB_31_Bg 1')
-                    oldBackgroundImage = 'SB_31_BG_04'
+                    oldBackgroundImage = 'SB_31_BG_02'
                 myImage.current.src = prePathUrl() + "images/SB_31_BG/" + oldBackgroundImage + ".svg";
                 myImage1.current.className = ''
 
