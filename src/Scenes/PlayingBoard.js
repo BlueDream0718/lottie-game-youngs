@@ -34,7 +34,7 @@ const characterList = [
     'Piglet',
     'Sheep',
 ]
-let randomList = [0, 9, 1, 2]
+let randomList = []
 const objectList = [
     {
         p: 'SB_31_CI_Cat_02', f: 'SB_31_CI_Cat_01', b: 'SB_31_CI_Cat_03',
