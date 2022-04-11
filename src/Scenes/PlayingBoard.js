@@ -107,6 +107,19 @@ const widthList = [
     { f: 4, b: 4, ps: 1.4 },
     { f: 4.3, b: 4, ps: 1.1 },
 ]
+
+const bgInfoList1 = [
+    { c: 0, l: -5, t: -7, s: 1.1 },
+    { c: 0, l: 12, t: 4, s: 0.8 },
+    { c: 0, l: 7, t: 10, s: 0.9 },
+    { c: 0, l: -5, t: -15, s: 1.1 },
+    { c: 0, l: 5, t: -5, s: 0.9 },
+    { c: 0, l: 0, t: -5, s: 0.9 },
+    { c: 0, l: -20, t: -10, s: 1.4 },
+    { c: 0, l: 0, t: -20, s: 1.1 },
+    { c: 0, l: -5, t: -10, s: 1.1 },
+    { c: 0, l: -5, t: -5, s: 1.1 },
+]
 const standardSpeed = 5.5;
 
 
@@ -1016,11 +1029,11 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                     ref={characterRef_FHighList[index]}
                                     style={{
                                         position: 'absolute',
-                                        width: getW(widthList[randomList[index]].f * bgInfoList[randomList[index]].s),
-                                        height: getW(widthList[randomList[index]].f * bgInfoList[randomList[index]].s),
-                                        left: bgInfoList[randomList[index]].l + '%',
-                                        top: bgInfoList[randomList[index]].t + '%',
-                                        background: colorList[bgInfoList[randomList[index]].c],
+                                        width: getW(widthList[randomList[index]].f * bgInfoList1[randomList[index]].s),
+                                        height: getW(widthList[randomList[index]].f * bgInfoList1[randomList[index]].s),
+                                        left: bgInfoList1[randomList[index]].l + '%',
+                                        top: bgInfoList1[randomList[index]].t + '%',
+                                        background: colorList[bgInfoList1[randomList[index]].c],
                                         borderRadius: '50%',
                                         opacity: 0.0,
                                     }}>
@@ -1061,11 +1074,11 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                     ref={characterRef_BHighList[index]}
                                     style={{
                                         position: 'absolute',
-                                        width: getW(widthList[randomList[index]].f * bgInfoList[randomList[index]].s),
-                                        height: getW(widthList[randomList[index]].f * bgInfoList[randomList[index]].s),
-                                        left: bgInfoList[randomList[index]].l + '%',
-                                        top: bgInfoList[randomList[index]].t + '%',
-                                        background: colorList[bgInfoList[randomList[index]].c],
+                                        width: getW(widthList[randomList[index]].f * bgInfoList1[randomList[index]].s),
+                                        height: getW(widthList[randomList[index]].f * bgInfoList1[randomList[index]].s),
+                                        left: bgInfoList1[randomList[index]].l + '%',
+                                        top: bgInfoList1[randomList[index]].t + '%',
+                                        background: colorList[bgInfoList1[randomList[index]].c],
                                         borderRadius: '50%',
                                         opacity: 0.0
                                     }}>
