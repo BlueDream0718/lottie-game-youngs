@@ -15,7 +15,8 @@ let repeartTimer, repeatInterval, repeatAudio = null
 export const startRepeartInterval = (audio = null) => {
     if (audio != null)
         repeatAudio = audio
-    else if (repeatAudio != null) {
+        
+    if (repeatAudio != null) {
         repeatAudio.currentTime = 0
         repeatAudio.play();
     }
