@@ -34,7 +34,7 @@ const characterList = [
     'Piglet',
     'Sheep',
 ]
-let randomList = []
+let randomList = [0, 9, 1, 2]
 const objectList = [
     {
         p: 'SB_31_CI_Cat_02', f: 'SB_31_CI_Cat_01', b: 'SB_31_CI_Cat_03',
@@ -118,10 +118,10 @@ const bgInfoList1 = [
     { c: 0, l: -20, t: -10, s: 1.4 },
     { c: 0, l: 0, t: -20, s: 1.1 },
     { c: 0, l: -5, t: -10, s: 1.1 },
-    { c: 0, l: -5, t: -5, s: 1.1 },
+    { c: 0, l: -10, t: -10, s: 1.1 },
 ]
-const standardSpeed = 5.5;
 
+const standardSpeed = 5.5;
 
 let currentSceneNum = 0;
 
@@ -602,7 +602,6 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
         }
 
         else {
-
             currentSceneNum++
 
             pathInfoList = pathList[currentSceneNum]
