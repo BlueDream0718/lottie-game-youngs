@@ -107,7 +107,7 @@ const widthList = [
     { f: 4, b: 4, ps: 1.4 },
     { f: 4.3, b: 4, ps: 1.1 },
 ]
-const standardSpeed = 50;
+const standardSpeed = 5.5;
 
 
 let currentSceneNum = 0;
