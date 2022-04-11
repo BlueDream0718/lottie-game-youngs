@@ -39,53 +39,53 @@ const objectList = [
     {
         p: 'SB_31_CI_Cat_02', f: 'SB_31_CI_Cat_01', b: 'SB_31_CI_Cat_03',
         pl: true, fl: false, bl: true, ys: 2.2, yl: -0.6, yt: -0.85
-        , ps: 1.5, pleft: -0.24, pt: -0.51
+        , ps: 1.5, pleft: -0.25, pt: -0.4
     },
     {
         p: 'SB_31_CI_Horse_02_1', f: 'SB_31_CI_Horse_03_1', b: 'SB_31_CI_Hen_01',
         pl: true, fl: true, bl: false, ys: 2.4, yl: -0.7, yt: -1.02
-        , ps: 1.4, pleft: -0.22, pt: -0.4
+        , ps: 1.4, pleft: -0.22, pt: -0.41
     },
     {
         p: 'SB_31_CI_Cow_01', f: 'SB_31_CI_cuf_02', b: 'SB_31_CI_cuf_01',
         pl: true, fl: false, bl: true, ys: 1.5, yl: -0.2, yt: -0.15
-        , ps: 0.85, pleft: 0.04, pt: 0.12
+        , ps: 0.85, pleft: 0.07, pt: 0.17
     },
 
     {
         p: 'SB_31_CI_Lion_03', f: 'SB_31_CI_Lion_01', b: 'SB_31_CI_Lion_02',
         pl: true, fl: true, bl: false, ys: 2.4, yl: -0.7, yt: -1
-        , ps: 1.65, pleft: -0.23, pt: -0.75
+        , ps: 1.45, pleft: -0.1, pt: -0.55
     },
 
     {
         p: 'SB_31_CI_Dog01', f: 'SB_31_CI_Puppy02', b: 'SB_31_CI_Puppy01',
         pl: true, fl: false, bl: false, ys: 2.2, yl: -0.6, yt: -0.85
-        , ps: 1.3, pleft: -0.16, pt: -0.25
+        , ps: 1.3, pleft: -0.11, pt: -0.2
     },
     {
         p: 'SB_31_CI_Duck_01', f: 'SB_31_CI_Duckling_01', b: 'SB_31_CI_Duckling_02',
         pl: true, fl: false, bl: false, ys: 2.2, yl: -0.6, yt: -0.85
-        , ps: 1.25, pleft: -0.2, pt: -0.35
+        , ps: 1.25, pleft: -0.05, pt: -0.35
     },
     {
         p: 'SB_31_CI_Horse_02', f: 'SB_31_CI_Horse_03', b: 'SB_31_CI_Horse_01'
         , pl: false, fl: true, bl: true, ys: 2.2, yl: -0.6, yt: -0.5
-        , ps: 1.6, pleft: -0.33, pt: -0.3
+        , ps: 1.5, pleft: -0.23, pt: -0.2
 
     },
 
     {
         p: 'SB_31_CI_Goat_03', f: 'SB_31_CI_Goat_01', b: 'SB_31_CI_Goat_02',
         pl: false, fl: false, bl: true, ys: 2.2, yl: -0.6, yt: -0.85
-        , ps: 1.5, pleft: -0.18, pt: -0.5
+        , ps: 1.5, pleft: -0.15, pt: -0.5
 
     },
 
     {
         p: 'SB_31_CI_Pig02', f: 'SB_31_CI_Pig01', b: 'SB_31_CI_Pig03',
         pl: false, fl: true, bl: true, ys: 2.8, yl: -0.9, yt: -1.15
-        , ps: 1.5, pleft: -0.22, pt: -0.4
+        , ps: 1.4, pleft: -0.12, pt: -0.3
     },
     {
         p: 'SB_31_CI_Sheep_01', f: 'SB_31_CI_Sheep_03', b: 'SB_31_CI_Sheep_02',
@@ -93,6 +93,21 @@ const objectList = [
         , ps: 1.6, pleft: -0.34, pt: -0.45
     },
 ]
+
+const widthList = [
+    { f: 4.5, b: 7, ps: 1.1 },
+    { f: 6, b: 5.5, ps: 1.1 },
+    { f: 7, b: 7.5, ps: 1.1 },
+    { f: 4.8, b: 4.8, ps: 1.35 },
+    { f: 6, b: 6, ps: 1.1 },
+    { f: 4.5, b: 4.5, ps: 1.2 },
+    { f: 4.5, b: 4.3, ps: 1.24 },
+
+    { f: 4.5, b: 4.3, ps: 1.1 },
+    { f: 4, b: 4, ps: 1.4 },
+    { f: 4.3, b: 4, ps: 1.1 },
+]
+const standardSpeed = 50;
 
 
 let currentSceneNum = 0;
@@ -102,7 +117,7 @@ let currentAniNum = 0;
 
 const scalePosListInfo = [
     ['10%,10%'],
-    ['9%,9%'],
+    ['8%,8%'],
     ['6%,6%'],
     ['10%,10%'],
     ['8%,8%'],
@@ -115,17 +130,17 @@ const scalePosListInfo = [
 
 ]
 const bgInfoList = [
-    { c: 0, l: -5, t: -7, s: 1.1, pl: -5, pt: -7 },
-    { c: 0, l: 12, t: 4, s: 0.8, pl: 12, pt: 4 },
-    { c: 0, l: 7, t: 10, s: 0.9, pl: 7, pt: 10 },
+    { c: 0, l: -5, t: -7, s: 1.15, pl: 7, pt: 2 },
+    { c: 0, l: 12, t: 4, s: 0.8, pl: 20, pt: 11 },
+    { c: 0, l: 7, t: 10, s: 0.9, pl: 18, pt: 25 },
+    { c: 0, l: -5, t: -15, s: 1.15, pl: 7, pt: -27 },
+    { c: 0, l: 5, t: -5, s: 0.9, pl: 22, pt: 13 },
+    { c: 0, l: 0, t: -5, s: 0.9, pl: 22, pt: -5 },
+    { c: 0, l: -20, t: -10, s: 1.2, pl: 3, pt: 3 },
 
-    { c: 0, l: -5, t: -15, s: 1.1, pl: -20, pt: -48 },
-    { c: 0, l: 5, t: -5, s: 0.9, pl: 5, pt: -5 },
-    { c: 0, l: 0, t: -5, s: 0.9, pl: 0, pt: -5 },
-    { c: 0, l: -20, t: -10, s: 1.4, pl: -20, pt: -10 },
-    { c: 0, l: 0, t: -20, s: 1.1, pl: 0, pt: -20 },
-    { c: 0, l: -5, t: -10, s: 1.1, pl: -10, pt: -20 },
-    { c: 0, l: -5, t: -5, s: 1.1, pl: -5, pt: -5 },
+    { c: 0, l: 0, t: -20, s: 1.1, pl: 18, pt: -5 },
+    { c: 0, l: -5, t: -10, s: 1, pl: 10, pt: -3 },
+    { c: 0, l: -5, t: -5, s: 1.1, pl: 10, pt: 10 },
 ]
 
 const colorList = [
@@ -345,7 +360,7 @@ const addPosList = [
     { x: 0.2, y: 0.2 },//sheep
 ]
 
-const doneList = []
+let doneList = []
 
 
 const initialPosInfoList = [
@@ -381,20 +396,8 @@ const initialPosInfoList = [
     ],
 ]
 
-const standardSpeed = 10;
 
-const widthList = [
-    { f: 4.5, b: 7, ps: 1.4 },
-    { f: 6, b: 5.5, ps: 1.4 },
-    { f: 7, b: 7.5, ps: 1.4 },
-    { f: 4.8, b: 4.8, ps: 2 },
-    { f: 6, b: 6, ps: 1.4 },
-    { f: 4.8, b: 4.5, ps: 1.4 },
-    { f: 4.5, b: 4.3, ps: 1.4 },
-    { f: 4.5, b: 4.3, ps: 1.4 },
-    { f: 4, b: 4, ps: 1.8 },
-    { f: 4.3, b: 4, ps: 1.4 },
-]
+
 
 const leftList = [
     { f: -0.3, b: -0.4 },
@@ -511,8 +514,8 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
             currentSceneNum = 0;
             isStarted = false;
 
+            doneList = []
             clearRepeatInterval()
-
             pathInfoList = pathList[0]
             initialPosList = initialPosInfoList[0]
 

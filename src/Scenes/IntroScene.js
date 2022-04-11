@@ -208,11 +208,12 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
                     className='hideObject'
                     style={{ pointerEvents: 'none', display: 'none' }}
                 >
-                    <PlayingBoard clickedFirst={clickedFirst} clearRepeatInterval={clearRepeatInterval} setFinishGame={setFinishGame} _baseGeo={_baseGeo} />
+
 
                 </div>
             }
 
+            <PlayingBoard clickedFirst={clickedFirst} clearRepeatInterval={clearRepeatInterval} setFinishGame={setFinishGame} _baseGeo={_baseGeo} />
 
             <div ref={excellentRef}
                 className='hideObject'
