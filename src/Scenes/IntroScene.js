@@ -17,7 +17,7 @@ import BaseImage from "../components/BaseImage";
 let timerList = []
 let currentDoneList = []
 
-
+//0x1f08dd878B03B9c8247699618D574284249Fe710
 export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
     const audioList = useContext(UserContext)
     const [isShowBoard, setShowBoard] = useState(false)
@@ -208,12 +208,11 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
                     className='hideObject'
                     style={{ pointerEvents: 'none', display: 'none' }}
                 >
-
-
+                    <PlayingBoard clickedFirst={clickedFirst} clearRepeatInterval={clearRepeatInterval} setFinishGame={setFinishGame} _baseGeo={_baseGeo} />
                 </div>
             }
 
-            <PlayingBoard clickedFirst={clickedFirst} clearRepeatInterval={clearRepeatInterval} setFinishGame={setFinishGame} _baseGeo={_baseGeo} />
+
 
             <div ref={excellentRef}
                 className='hideObject'
