@@ -120,7 +120,7 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
                                     myhand.current.style.transform = ""
                                     timerList[9] = setTimeout(() => {
                                         myhand.current.className = 'hide'
-                                        audioList.subBodyAudio2.play();
+                                        startRepeartInterval(audioList.repeatAudio);
                                         animationBoyRef.current.play();
                                         timerList[10] = setTimeout(() => {
                                             animationBoyRef.current.stop();
@@ -132,7 +132,6 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
                                                     introBoy.current.style.left = _geo.width * 0.3 + _geo.left + 'px'
                                                 }, 500);
                                                 panelRef.current.style.pointerEvents = ''
-                                                startRepeartInterval(audioList.repeatAudio);
                                             }, 500);
                                         }, audioList.subBodyAudio2.duration * 1000);
                                     }, 1000);
