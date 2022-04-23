@@ -743,6 +743,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
 
         clearTimeout(timerList[0])
         clearTimeout(timerList[1])
+
         if (lastAudio != null) {
             lastAudio.pause()
             lastAudio.currentTime = 0

@@ -149,7 +149,7 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
             setTimeout(() => {
                 startRepeartInterval(audioList.repeatAudio);
                 panelRef.current.style.pointerEvents = ''
-            }, 1000);
+            }, 500);
         }
     }
 
@@ -239,6 +239,7 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
                     width={"100%"}
                     src={prePathUrl() + 'images/Buttons/Skip_blue.svg'}
                 />
+
             </div>
 
             <div

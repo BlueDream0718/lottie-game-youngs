@@ -11,7 +11,7 @@ export function initialAudio(audioList) {
 
 
 let repeartTimer, repeatInterval, repeatAudio = null
-
+let isRepeat = false
 export const startRepeartInterval = (audio = null) => {
     if (audio != null)
         repeatAudio = audio
