@@ -857,6 +857,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
     }
 
     const rotateCharacter = (index) => {
+        clearRepeatInterval();
         let currentAddPos = getAddPos(index);
 
         movingCenterList[index].current.style.left = pathInfoList[index][currentStep].x + currentAddPos.x + '%'
