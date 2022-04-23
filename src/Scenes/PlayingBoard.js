@@ -13,15 +13,6 @@ import BackScene4 from "./BackScene4";
 
 
 
-const oppositeList = [
-    'Chick_B',
-    'Cub_B',
-    'Dog_B',
-    'Dog_F',
-    'Sheep_B',
-    'Duck_F'
-]
-
 const characterList = [
     'Cat',
     'Chick',
@@ -34,63 +25,109 @@ const characterList = [
     'Piglet',
     'Sheep',
 ]
+let testNmum = 9
 let randomList = []
 const objectList = [
     {
         p: 'SB_31_CI_Cat_02', f: 'SB_31_CI_Cat_01', b: 'SB_31_CI_Cat_03',
-        pl: true, fl: false, bl: true, ys: 2.2, yl: -0.6, yt: -0.85
-        , ps: 1.5, pleft: -0.25, pt: -0.4
+        pl: true, fl: false, bl: true,
+        ys: 2.5,
+        yl: -0.9, yt: -0.9,
+        ylb: -0.55, ytb: -0.8
+        , ps: 1.9, pleft: -0.6, pt: -0.55,
+        cs: 23
     },
     {
         p: 'SB_31_CI_Horse_02_1', f: 'SB_31_CI_Horse_03_1', b: 'SB_31_CI_Hen_01',
-        pl: true, fl: true, bl: false, ys: 2.4, yl: -0.7, yt: -1.02
-        , ps: 1.4, pleft: -0.22, pt: -0.41
+        pl: true, fl: true, bl: false,
+        ys: 2.8,
+        yl: -1, yt: -1.2,
+        ylb: -1.0, ytb: -1.3
+        , ps: 1.5,
+        pleft: -0.33, pt: -0.4,
+        cs: 20
     },
     {
         p: 'SB_31_CI_Cow_01', f: 'SB_31_CI_cuf_02', b: 'SB_31_CI_cuf_01',
-        pl: true, fl: false, bl: true, ys: 1.5, yl: -0.2, yt: -0.15
-        , ps: 0.85, pleft: 0.07, pt: 0.17
+        pl: true, fl: false, bl: true,
+        ys: 1.8,
+        yl: -0.55, yt: -0.18,
+        ylb: -0.45, ytb: -0.25
+        , ps: 0.9,
+        pleft: -0.1, pt: 0.15,
+        cs: 23
     },
 
     {
         p: 'SB_31_CI_Lion_03', f: 'SB_31_CI_Lion_01', b: 'SB_31_CI_Lion_02',
-        pl: true, fl: true, bl: false, ys: 2.4, yl: -0.7, yt: -1
-        , ps: 1.45, pleft: -0.1, pt: -0.55
+        pl: true, fl: true, bl: false, ys: 2.4,
+        yl: -0.8, yt: -0.8,
+        ylb: -0.8, ytb: -1
+        , ps: 1.45,
+        pleft: -0.35, pt: -0.35,
+        cs: 23
     },
 
     {
         p: 'SB_31_CI_Dog01', f: 'SB_31_CI_Puppy02', b: 'SB_31_CI_Puppy01',
-        pl: true, fl: false, bl: false, ys: 2.2, yl: -0.6, yt: -0.85
-        , ps: 1.3, pleft: -0.11, pt: -0.2
+        pl: true, fl: false, bl: false, ys: 2.5,
+        yl: -0.85, yt: -0.95,
+        ylb: -0.95, ytb: -1.15
+        , ps: 1.3,
+        pleft: -0.22, pt: -0.15,
+        cs: 18
     },
     {
         p: 'SB_31_CI_Duck_01', f: 'SB_31_CI_Duckling_01', b: 'SB_31_CI_Duckling_02',
-        pl: true, fl: false, bl: false, ys: 2.2, yl: -0.6, yt: -0.85
-        , ps: 1.25, pleft: -0.05, pt: -0.35
+        pl: true, fl: false, bl: false, ys: 3,
+        yl: -1.1, yt: -1.25,
+        ylb: -1.1, ytb: -1.4
+        , ps: 1.25,
+        pleft: -0.28, pt: -0.22,
+        cs: 15
     },
     {
         p: 'SB_31_CI_Horse_02', f: 'SB_31_CI_Horse_03', b: 'SB_31_CI_Horse_01'
-        , pl: false, fl: true, bl: true, ys: 2.2, yl: -0.6, yt: -0.5
-        , ps: 1.5, pleft: -0.23, pt: -0.2
+        , pl: false, fl: true, bl: true,
+        ys: 2.2,
+        yl: -0.7, yt: -0.3,
+        ylb: -0.8, ytb: -0.45
+        , ps: 1.5, pleft: -0.38, pt: -0.1
+        ,
+        cs: 21
 
     },
 
     {
         p: 'SB_31_CI_Goat_03', f: 'SB_31_CI_Goat_01', b: 'SB_31_CI_Goat_02',
-        pl: false, fl: false, bl: true, ys: 2.2, yl: -0.6, yt: -0.85
-        , ps: 1.5, pleft: -0.15, pt: -0.5
+        pl: false, fl: false, bl: true, ys: 2.6,
+        yl: -0.8, yt: -1,
+        ylb: -1, ytb: -1.25
+        , ps: 1.7, pleft: -0.35, pt: -0.4
+        ,
+        cs: 20
 
     },
 
     {
         p: 'SB_31_CI_Pig02', f: 'SB_31_CI_Pig01', b: 'SB_31_CI_Pig03',
-        pl: false, fl: true, bl: true, ys: 2.8, yl: -0.9, yt: -1.15
-        , ps: 1.4, pleft: -0.12, pt: -0.3
+        pl: false, fl: true, bl: true,
+        ys: 3.5,
+        yl: -1.3, yt: -1.4,
+        ylb: -1.5, ytb: -1.6
+        , ps: 1.5, pleft: -0.4, pt: -0.25
+        ,
+        cs: 18
     },
     {
         p: 'SB_31_CI_Sheep_01', f: 'SB_31_CI_Sheep_03', b: 'SB_31_CI_Sheep_02',
-        pl: true, fl: true, bl: true, ys: 2.3, yl: -0.7, yt: -0.85
-        , ps: 1.6, pleft: -0.34, pt: -0.45
+        pl: true, fl: true, bl: true, ys: 2.8,
+        yl: -1, yt: -1,
+        ylb: -1.15, ytb: -1.2
+        , ps: 1.8,
+        pleft: -0.54, pt: -0.35
+        ,
+        cs: 18
     },
 ]
 
@@ -108,20 +145,8 @@ const widthList = [
     { f: 4.3, b: 4, ps: 1.1 },
 ]
 
-const bgInfoList1 = [
-    { c: 0, l: -5, t: -17, s: 1.1 },
-    { c: 0, l: 12, t: 4, s: 0.8 },
-    { c: 0, l: 7, t: 10, s: 0.9 },
-    { c: 0, l: -5, t: -15, s: 1.1 },
-    { c: 0, l: 5, t: -5, s: 0.9 },
-    { c: 0, l: 0, t: -5, s: 0.9 },
-    { c: 0, l: -20, t: -10, s: 1.4 },
-    { c: 0, l: 0, t: -20, s: 1.1 },
-    { c: 0, l: -5, t: -10, s: 1.1 },
-    { c: 0, l: -10, t: -10, s: 1.1 },
-]
 
-const standardSpeed = 5.5;
+let standardSpeed = 7;
 
 let currentSceneNum = 0;
 
@@ -129,32 +154,20 @@ let currentStep = 0;
 let currentAniNum = 0;
 
 const scalePosListInfo = [
-    ['10%,10%'],
+    ['17%,6%'],
+    ['8%,5%'],
+    ['12%,-3%'],
+    ['8%,6%'],
+    ['7%,6%'],
     ['8%,8%'],
+    ['12%,3%'],
+    ['8%,8%'],
+
     ['6%,6%'],
-    ['10%,10%'],
-    ['8%,8%'],
-    ['8%,8%'],
-    ['8%,8%'],
-    ['8%,8%'],
-
-    ['10%,10%'],
     ['8%,8%'],
 
 ]
-const bgInfoList = [
-    { c: 0, l: -5, t: -7, s: 1.15, pl: 7, pt: 2 },
-    { c: 0, l: 12, t: 4, s: 0.8, pl: 20, pt: 11 },
-    { c: 0, l: 7, t: 10, s: 0.9, pl: 18, pt: 25 },
-    { c: 0, l: -5, t: -15, s: 1.15, pl: 7, pt: -27 },
-    { c: 0, l: 5, t: -5, s: 0.9, pl: 22, pt: 13 },
-    { c: 0, l: 0, t: -5, s: 0.9, pl: 22, pt: -5 },
-    { c: 0, l: -20, t: -10, s: 1.2, pl: 3, pt: 3 },
 
-    { c: 0, l: 0, t: -20, s: 1.1, pl: 18, pt: -5 },
-    { c: 0, l: -5, t: -10, s: 1, pl: 10, pt: -3 },
-    { c: 0, l: -5, t: -5, s: 1.1, pl: 10, pt: 10 },
-]
 
 const colorList = [
     '#fff257', '#76eefe'
@@ -183,7 +196,7 @@ const pathList1 = [
         { x: 45.29, y: 33.5 },
         { x: 42.69, y: 36.75 },
         { x: 51.19, y: 46.14 },
-        { x: 45.15, y: 52.75 },
+        { x: 46.15, y: 51.75 },
     ]
     ,
     [
@@ -220,6 +233,7 @@ const pathList1 = [
 ]
 
 
+
 const pathList2 = [
     [
         { x: 27.88, y: 67.13 },
@@ -249,7 +263,7 @@ const pathList2 = [
         { x: 66.36, y: 41.13 },
         { x: 57.37, y: 32.12 },
         { x: 38.9, y: 50.5 },
-        { x: 47.54, y: 59.62 }
+        { x: 46.54, y: 56 }
     ],
     [
         { x: 77.25, y: 50.75 },
@@ -277,7 +291,7 @@ const pathList3 = [
         { x: 34.69, y: 44.37 },
         { x: 45.29, y: 33.5 },
         { x: 50.91, y: 41.38 },
-        { x: 44.24, y: 48.13 }
+        { x: 45, y: 46 }
     ]
     ,
     [
@@ -339,8 +353,9 @@ const pathList4 = [
         { x: 66.36, y: 58.63 },
         { x: 47.26, y: 38.87 },
         { x: 41.08, y: 46.37 },
-        { x: 53.72, y: 59.5 },
-        { x: 48.26, y: 66.25 },
+        { x: 45.72, y: 52.5 },
+        { x: 43.72, y: 55.5 },
+        { x: 50, y: 60 },
     ],
     [
 
@@ -372,6 +387,10 @@ const addPosList = [
     { x: 0.2, y: 0.2 },//piglet
     { x: 0.2, y: 0.2 },//sheep
 ]
+
+const lastPosList = pathList4[2]
+let lastPos = lastPosList[lastPosList.length - 1]
+
 
 let doneList = []
 
@@ -444,22 +463,20 @@ const correctPathList = [
 ]
 
 
-
-
-
-
 let pathList = [
     pathList1, pathList2, pathList3, pathList4, pathList2
 ]
 
-let pathInfoList = pathList[0]
-let initialPosList = initialPosInfoList[0]
+let pathInfoList = pathList[currentSceneNum]
+
+let initialPosList = initialPosInfoList[currentSceneNum]
+
 let parentPosList = [
-    { x: 43.7, y: 51.7, r: false },
-    { x: 48.35, y: 58, r: true },
-    { x: 43.5, y: 46.5, r: false },
-    { x: 47.14, y: 64.63, r: false },
-    { x: 48.35, y: 57.5, r: true },
+    { x: 44.7, y: 50, r: false },
+    { x: 47.35, y: 54, r: true },
+    { x: 44, y: 44.5, r: false },
+    { x: 51, y: 58.63, r: true },
+    { x: 47.35, y: 54, r: true },
 ]
 
 if (randomList.length == 0)
@@ -482,6 +499,8 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
     const movingGroup = useRef();
     const parentRef = useRef();
     const parentColorRef = useRef()
+
+    const childColorRefList = Array.from({ length: 4 }, ref => useRef())
 
     // const characterRef_FList = Array.from({ length: 4 }, ref => useRef())
     // const characterRef_BList = Array.from({ length: 4 }, ref => useRef())
@@ -569,26 +588,20 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                 randomList.push(randomNumber)
                         }
 
-                    // characterRef_BList.map((value, index) => {
-                    //     characterRef_BList[index].current.stop()
-                    //     characterRef_FList[index].current.stop()
-                    // })
+
 
                     goNextStep(stepState + 1)
 
                     BackSceneList[currentSceneNum].current.className = 'aniObject'
 
                     randomList.map((value, index) => {
-                        // setTimeout(() => {
-                        //     characterRef_FList[index].current.stop();
-                        //     characterRef_BList[index].current.stop();
-                        // }, 500);
 
                         let currentAddPos = getAddPos(index, true);
 
                         movingCenterList[index].current.style.transition = '0s'
                         movingCenterList[index].current.style.left = initialPosList[index].x + currentAddPos.x + '%'
                         movingCenterList[index].current.style.top = initialPosList[index].y + currentAddPos.y + '%'
+                        childColorRefList[index].current.style.opacity = 1
                     })
                     baseRef.current.style.pointerEvents = ''
 
@@ -663,9 +676,13 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
 
                     let currentAddPos = getAddPos(index, true);
 
+                    // characterRef_FHighList[index].current.style.opacity = 0.8
+                    // characterRef_BHighList[index].current.style.opacity = 0.8
+
                     movingCenterList[index].current.style.transition = '0s'
                     movingCenterList[index].current.style.left = initialPosList[index].x + currentAddPos.x + '%'
                     movingCenterList[index].current.style.top = initialPosList[index].y + currentAddPos.y + '%'
+                    childColorRefList[index].current.style.opacity = 1
                 })
 
                 setTimeout(() => {
@@ -687,11 +704,8 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
         let currentTime = calculateTime(index, true);
 
 
-        characterRef_FHighList[index].current.style.transition = '0.5s'
-        characterRef_BHighList[index].current.style.transition = '0.5s'
-
-        characterRef_FHighList[index].current.style.opacity = 0.8
-        characterRef_BHighList[index].current.style.opacity = 0.8
+        // characterRef_FHighList[index].current.style.opacity = 0.8
+        // characterRef_BHighList[index].current.style.opacity = 0.8
 
         // characterRef_FList[index].current.play();
         // characterRef_BList[index].current.play();
@@ -762,6 +776,8 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
 
     }
 
+    // standardSpeed = 100;
+
     const getAddPos = (index, isInitial = false) => {
 
         let { x: addPosX, y: addPosY } = addPosList[randomList[index]]
@@ -770,41 +786,50 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
         let endPos = isInitial ? pathInfoList[index][0] : pathInfoList[index][currentStep + 1]
 
         movingCenterList[index].current.style.transition = '0s'
+        if (isInitial || currentStep == pathInfoList[index].length - 2) {
+            if (endPos.x < startPos.x) {
+                movingCenterList[index].current.style.transform = 'rotateY(0deg)'
+                addPosX *= -1
+            }
+            else {
+                movingCenterList[index].current.style.transform = 'rotateY(180deg)'
+            }
 
-        if (endPos.x < startPos.x) {
-            movingCenterList[index].current.style.transform = 'rotateY(0deg)'
-            addPosX *= -1
+
+            if (endPos.y < startPos.y) {
+                addPosY *= -1
+
+
+                objectBackList[index].current.className = 'commonButton showObject'
+                objectFrontList[index].current.className = 'hideObject'
+
+                // characterRef_BList[index].current.play();
+                // characterRef_FList[index].current.pause();
+
+                addPosX *= widthList[randomList[index]].b
+                addPosY *= widthList[randomList[index]].b
+            }
+
+            else {
+                objectBackList[index].current.className = 'hideObject'
+                objectFrontList[index].current.className = 'commonButton showObject'
+
+                // characterRef_FList[index].current.play();
+                // characterRef_BList[index].current.pause();
+
+                addPosX *= widthList[randomList[index]].f
+                addPosY *= widthList[randomList[index]].f
+            }
         }
         else {
-            movingCenterList[index].current.style.transform = 'rotateY(180deg)'
+            addPosX = 0
+            addPosY = 0
         }
 
-        if (endPos.y < startPos.y) {
-            addPosY *= -1
-
-
-            objectBackList[index].current.className = 'commonButton showObject'
-            objectFrontList[index].current.className = 'hideObject'
-
-            // characterRef_BList[index].current.play();
-            // characterRef_FList[index].current.pause();
-
-            addPosX *= widthList[randomList[index]].b
-            addPosY *= widthList[randomList[index]].b
-        }
-
-        else {
-            objectBackList[index].current.className = 'hideObject'
-            objectFrontList[index].current.className = 'commonButton showObject'
-
-            // characterRef_FList[index].current.play();
-            // characterRef_BList[index].current.pause();
-
-            addPosX *= widthList[randomList[index]].f
-            addPosY *= widthList[randomList[index]].f
-        }
-
-        return { x: addPosX, y: addPosY }
+        if (currentStep == pathInfoList[index].length - 2)
+            return { x: 0, y: 0 }
+        else
+            return { x: addPosX, y: addPosY }
     }
 
     const calculateTime = (index, isInitial = false) => {
@@ -856,8 +881,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                     //     characterRef_BList[index].current.stop();
                     // }, 200);
 
-                    characterRef_FHighList[index].current.style.opacity = 0.0
-                    characterRef_BHighList[index].current.style.opacity = 0.0
+                    childColorRefList[index].current.style.opacity = 0.0
                     audioList.clapAudio.play();
 
                     refMarkList[doneList.length % 5].current.src = prePathUrl() + "images/progressBar/sb_52_star_icon.svg"
@@ -870,7 +894,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                         objectBackList[index].current.style.transition = '1.3s'
                         objectFrontList[index].current.style.transition = '1.3s'
                         parentRef.current.style.transition = '1.3s'
-
+                        parentColorRef.current.style.transition = '0.5s'
                         parentColorRef.current.style.opacity = 1
 
                         objectBackList[index].current.style.transform += ' scale(1.7) translate(' + scalePosListInfo[randomList[index]] + ')'
@@ -892,7 +916,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                             objectBackList[index].current.style.transform = lastTransformB + ' scale(1)'
                             objectFrontList[index].current.style.transform = lastTransformF + ' scale(1)'
                             parentRef.current.style.transform = lastTransformP + ' scale(1)'
-                            parentColorRef.current.style.opacity = 0.9
+                            parentColorRef.current.style.opacity = 0.0
 
                             setTimeout(() => {
                                 objectBackList[index].current.style.transition = '0.0s'
@@ -948,47 +972,43 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                     }}
                 >
                     <div
+                        ref={parentRef}
                         style={{
                             position: 'absolute',
                             width: '3px',
                             height: '3px',
                             left: parentPosList[currentSceneNum].x + '%',
                             top: parentPosList[currentSceneNum].y + '%',
-                            transform: 'rotateY(' + (parentPosList[currentSceneNum].r ? '180deg)' : '0deg)')
-
+                            transform: 'rotateY(' + (parentPosList[currentSceneNum].r ? '180deg)' : '0deg)'),
                         }}>
 
                         <div
-                            ref={parentRef}
+                            ref={parentColorRef}
                             style={{
-                                position: "absolute", width: getW(widthList[randomList[correctPathList[currentSceneNum]]].f * 1.4)
+                                position: 'absolute',
+                                width: getW(0.4),
+                                height: getW(0.4),
+                                left: -50 + '%',
+                                top: -50 + '%',
+                                background: colorList[1],
+                                transform: 'scale(' + objectList[randomList[correctPathList[currentSceneNum]]].cs + ') translateY(-10%)',
+                                borderRadius: '50%',
+                                pointerEvents: 'none',
+                                opacity: 0
+                            }}>
+                        </div>
+
+                        <div
+
+                            style={{
+                                position: "absolute", width: getW(widthList[randomList[correctPathList[currentSceneNum]]].f * 1.5)
+                                , height: getW(widthList[randomList[correctPathList[currentSceneNum]]].f * 1.5)
                                 , left: getW(leftList[randomList[correctPathList[currentSceneNum]]].f
-                                    * widthList[randomList[correctPathList[currentSceneNum]]].f * 1.4),
-                                top: getH(topList[randomList[correctPathList[currentSceneNum]]].f * widthList[randomList[correctPathList[currentSceneNum]]].f * 1.4),
+                                    * widthList[randomList[correctPathList[currentSceneNum]]].f * 1.5),
+                                top: getH(topList[randomList[correctPathList[currentSceneNum]]].f *
+                                    widthList[randomList[correctPathList[currentSceneNum]]].f * 1.5),
                                 // transform: 'rotateY(' + (oppositeList.includes(characterList[randomList[correctPathList[currentSceneNum]]] + '_F') ? '180deg)' : '0deg)'),
                             }}>
-                            <div
-                                ref={parentColorRef}
-                                style={{
-                                    position: 'absolute',
-                                    width: getW(widthList[randomList[correctPathList[currentSceneNum]]].ps * widthList[randomList[correctPathList[currentSceneNum]]].f * bgInfoList[randomList[correctPathList[currentSceneNum]]].s),
-                                    height: getW(widthList[randomList[correctPathList[currentSceneNum]]].ps * widthList[randomList[correctPathList[currentSceneNum]]].f * bgInfoList[randomList[correctPathList[currentSceneNum]]].s),
-                                    left: bgInfoList[randomList[correctPathList[currentSceneNum]]].pl + '%',
-                                    top: bgInfoList[randomList[correctPathList[currentSceneNum]]].pt + '%',
-                                    background: '#76eefe',
-                                    borderRadius: '50%',
-                                    transition: '0.5s',
-                                    opacity: 0.9
-                                }}>
-                            </div>
-
-                            <Lottie
-                                options={returnOption(randomList[correctPathList[currentSceneNum]])}
-                                mouseDown={false}
-                                isClickToPauseDisabled={true}
-                                isStopped={true}
-                                style={{ opacity: 0 }}
-                            />
 
                             <BaseImage
                                 scale={objectList[randomList[correctPathList[currentSceneNum]]].ps}
@@ -999,6 +1019,18 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                 style={{ transform: 'rotateY(' + (objectList[randomList[correctPathList[currentSceneNum]]].pl == false ? '180deg' : '0deg') + ')' }}
                                 url={'recent/' + objectList[randomList[correctPathList[currentSceneNum]]].p + '.svg'}
                             />
+
+                        </div>
+
+                        <div
+                            style={{
+                                position: 'absolute',
+                                width: '3px',
+                                height: '3px',
+                                left: 0 + '%',
+                                top: 0 + '%',
+                                // background: 'black',
+                            }}>
                         </div>
                     </div>
                     {initialPosList.map((value, index) =>
@@ -1006,12 +1038,25 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                             ref={movingCenterList[index]}
                             style={{
                                 position: 'absolute',
-                                width: '3px',
-                                height: '3px',
+                                width: '4px',
+                                height: '4px',
                                 left: value.x + '%',
                                 top: value.y + '%',
                             }}>
-
+                            <div
+                                ref={childColorRefList[index]}
+                                style={{
+                                    position: 'absolute',
+                                    width: getW(0.35),
+                                    height: getW(0.35),
+                                    left: -50 + '%',
+                                    top: -50 + '%',
+                                    background: colorList[0],
+                                    transform: 'scale(17) translateY(-10%)',
+                                    borderRadius: '50%',
+                                    pointerEvents: 'none'
+                                }}>
+                            </div>
 
                             <div
                                 ref={objectFrontList[index]}
@@ -1024,20 +1069,6 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                     // transform: 'rotateY(' + (oppositeList.includes(characterList[randomList[index]] + '_F') ? '180deg)' : '0deg)'),
                                     transition: '0.0s'
                                 }}>
-                                <div
-                                    ref={characterRef_FHighList[index]}
-                                    style={{
-                                        position: 'absolute',
-                                        width: getW(widthList[randomList[index]].f * bgInfoList1[randomList[index]].s),
-                                        height: getW(widthList[randomList[index]].f * bgInfoList1[randomList[index]].s),
-                                        left: bgInfoList1[randomList[index]].l + '%',
-                                        top: bgInfoList1[randomList[index]].t + '%',
-                                        background: colorList[bgInfoList1[randomList[index]].c],
-                                        borderRadius: '50%',
-                                        opacity: 0.0,
-                                    }}>
-
-                                </div>
 
                                 <Lottie
                                     options={returnOption(randomList[index])}
@@ -1063,26 +1094,13 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                 onClick={() => { playAnimation(index) }}
                                 className='commonButton'
                                 style={{
-                                    position: "absolute", width: getW(widthList[randomList[index]].f)
+                                    position: "absolute",
+                                    width: getW(widthList[randomList[index]].f)
                                     , left: getW(leftList[randomList[index]].b * widthList[randomList[index]].b),
                                     top: getH(topList[randomList[index]].b * widthList[randomList[index]].b),
                                     // transform: 'rotateY(' + (oppositeList.includes(characterList[randomList[index]] + '_B') ? '180deg)' : '0deg)'),
                                     transition: '0.0s'
                                 }}>
-                                <div
-                                    ref={characterRef_BHighList[index]}
-                                    style={{
-                                        position: 'absolute',
-                                        width: getW(widthList[randomList[index]].f * bgInfoList1[randomList[index]].s),
-                                        height: getW(widthList[randomList[index]].f * bgInfoList1[randomList[index]].s),
-                                        left: bgInfoList1[randomList[index]].l + '%',
-                                        top: bgInfoList1[randomList[index]].t + '%',
-                                        background: colorList[bgInfoList1[randomList[index]].c],
-                                        borderRadius: '50%',
-                                        opacity: 0.0
-                                    }}>
-                                </div>
-
 
 
                                 <Lottie
@@ -1095,12 +1113,23 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                 <BaseImage
                                     scale={objectList[randomList[index]].ys}
                                     posInfo={{
-                                        l: objectList[randomList[index]].yl,
-                                        t: objectList[randomList[index]].yt
+                                        l: objectList[randomList[index]].ylb,
+                                        t: objectList[randomList[index]].ytb
                                     }}
                                     style={{ transform: 'rotateY(' + (objectList[randomList[index]].bl == false ? '180deg' : '0deg') + ')' }}
                                     url={'recent/' + objectList[randomList[index]].b + '.svg'}
                                 />
+                            </div>
+
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    width: '3px',
+                                    height: '3px',
+                                    left: 0 + '%',
+                                    top: 0 + '%',
+                                    // background: 'black',
+                                }}>
                             </div>
                         </div>
                     )
@@ -1109,9 +1138,21 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
 
 
                 </div>
+                <div
+                    style={{
+                        position: 'absolute',
+                        width: '3px',
+                        height: '3px',
+                        left: lastPos.x + "%",
+                        top: lastPos.y + "%",
+                        // background: 'black'
 
+                    }}>
 
+                </div>
             </div>
+
+
 
             {/* marks */}
             <div
