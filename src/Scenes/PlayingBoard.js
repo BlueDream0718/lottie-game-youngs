@@ -31,30 +31,30 @@ const objectList = [
     {
         p: 'SB_31_CI_Cat_02', f: 'SB_31_CI_Cat_01', b: 'SB_31_CI_Cat_03',
         pl: true, fl: false, bl: true,
-        ys: 2.5,
-        yl: -0.9, yt: -0.9,
+        ys: 2.7,
+        yl: -1, yt: -1,
         ylb: -0.55, ytb: -0.8
         , ps: 1.9, pleft: -0.6, pt: -0.55,
         cs: 23
     },
     {
-        p: 'SB_31_CI_Horse_02_1', f: 'SB_31_CI_Horse_03_1', b: 'SB_31_CI_Hen_01',
+        p: 'SB_31_CI_Hen_02', f: 'SB_31_CI_Hen_03', b: 'SB_31_CI_Hen_01',
         pl: true, fl: true, bl: false,
         ys: 2.8,
-        yl: -1, yt: -1.2,
+        yl: -0.98, yt: -1.1,
         ylb: -1.0, ytb: -1.3
-        , ps: 1.5,
-        pleft: -0.33, pt: -0.4,
+        , ps: 1.8,
+        pleft: -0.48, pt: -0.55,
         cs: 20
     },
     {
         p: 'SB_31_CI_Cow_01', f: 'SB_31_CI_cuf_02', b: 'SB_31_CI_cuf_01',
         pl: true, fl: false, bl: true,
-        ys: 1.8,
-        yl: -0.55, yt: -0.18,
+        ys: 1.4,
+        yl: -0.35, yt: 0.02,
         ylb: -0.45, ytb: -0.25
-        , ps: 0.9,
-        pleft: -0.1, pt: 0.15,
+        , ps: 1,
+        pleft: -0.2, pt: 0.12,
         cs: 23
     },
 
@@ -64,7 +64,7 @@ const objectList = [
         yl: -0.8, yt: -0.8,
         ylb: -0.8, ytb: -1
         , ps: 1.45,
-        pleft: -0.35, pt: -0.35,
+        pleft: -0.35, pt: -0.3,
         cs: 23
     },
 
@@ -73,26 +73,27 @@ const objectList = [
         pl: true, fl: false, bl: false, ys: 2.5,
         yl: -0.85, yt: -0.95,
         ylb: -0.95, ytb: -1.15
-        , ps: 1.3,
-        pleft: -0.22, pt: -0.15,
+        , ps: 1.4,
+        pleft: -0.28, pt: -0.25,
         cs: 18
     },
     {
         p: 'SB_31_CI_Duck_01', f: 'SB_31_CI_Duckling_01', b: 'SB_31_CI_Duckling_02',
-        pl: true, fl: false, bl: false, ys: 3,
-        yl: -1.1, yt: -1.25,
+        pl: true, fl: false, bl: false,
+        ys: 2.1,
+        yl: -0.55, yt: -0.7,
         ylb: -1.1, ytb: -1.4
-        , ps: 1.25,
-        pleft: -0.28, pt: -0.22,
-        cs: 15
+        , ps: 1.8,
+        pleft: -0.48, pt: -0.53,
+        cs: 20
     },
     {
         p: 'SB_31_CI_Horse_02', f: 'SB_31_CI_Horse_03', b: 'SB_31_CI_Horse_01'
         , pl: false, fl: true, bl: true,
-        ys: 2.2,
-        yl: -0.7, yt: -0.3,
+        ys: 2.6,
+        yl: -0.9, yt: -0.4,
         ylb: -0.8, ytb: -0.45
-        , ps: 1.5, pleft: -0.38, pt: -0.1
+        , ps: 1.7, pleft: -0.5, pt: -0.2
         ,
         cs: 21
 
@@ -100,10 +101,10 @@ const objectList = [
 
     {
         p: 'SB_31_CI_Goat_03', f: 'SB_31_CI_Goat_01', b: 'SB_31_CI_Goat_02',
-        pl: false, fl: false, bl: true, ys: 2.6,
-        yl: -0.8, yt: -1,
+        pl: false, fl: false, bl: true, ys: 2.4,
+        yl: -0.7, yt: -0.9,
         ylb: -1, ytb: -1.25
-        , ps: 1.7, pleft: -0.35, pt: -0.4
+        , ps: 1.7, pleft: -0.35, pt: -0.45
         ,
         cs: 20
 
@@ -115,17 +116,17 @@ const objectList = [
         ys: 3.5,
         yl: -1.3, yt: -1.4,
         ylb: -1.5, ytb: -1.6
-        , ps: 1.5, pleft: -0.4, pt: -0.25
+        , ps: 1.9, pleft: -0.55, pt: -0.45
         ,
-        cs: 18
+        cs: 20
     },
     {
         p: 'SB_31_CI_Sheep_01', f: 'SB_31_CI_Sheep_03', b: 'SB_31_CI_Sheep_02',
-        pl: true, fl: true, bl: true, ys: 2.8,
-        yl: -1, yt: -1,
+        pl: true, fl: true, bl: true, ys: 2.6,
+        yl: -0.9, yt: -0.9,
         ylb: -1.15, ytb: -1.2
         , ps: 1.8,
-        pleft: -0.54, pt: -0.35
+        pleft: -0.54, pt: -0.4
         ,
         cs: 18
     },
@@ -146,7 +147,7 @@ const widthList = [
 ]
 
 
-let standardSpeed = 7;
+let standardSpeed = 10;
 
 let currentSceneNum = 0;
 
@@ -172,6 +173,7 @@ const scalePosListInfo = [
 const colorList = [
     '#fff257', '#76eefe'
 ]
+
 
 const pathList1 = [
     [
@@ -397,22 +399,22 @@ let doneList = []
 
 const initialPosInfoList = [
     [
-        { x: 22.54, y: 52.12 },
-        { x: 26.47, y: 70.25 },
-        { x: 44.45, y: 75.25 },
-        { x: 84.06, y: 45.25 }
+        { x: 22.96, y: 52.29 },
+        { x: 25.93, y: 69.86 },
+        { x: 44.45, y: 77.14 },
+        { x: 83.06, y: 45.14 },
     ],
     [
         { x: 19, y: 57.5 },
-        { x: 42.77, y: 76.38 },
-        { x: 69.45, y: 68.63 },
-        { x: 85.81, y: 58.87 }
+        { x: 40.77, y: 76},
+        { x: 68.5, y: 69 },
+        { x: 85.1, y: 58.87 }
     ],
     [
-        { x: 28.65, y: 51.75 },
-        { x: 77.39, y: 62.12 },
-        { x: 45.01, y: 67.87 },
-        { x: 83.71, y: 55.25 }
+        { x: 28, y: 50.5 },
+        { x: 77, y: 63 },
+        { x: 44.01, y: 67.87 },
+        { x: 82.71, y: 55.5 }
     ],
     [
         { x: 21.98, y: 46.75 },
@@ -422,9 +424,9 @@ const initialPosInfoList = [
     ],
     [
         { x: 19, y: 57.5 },
-        { x: 42.77, y: 76.38 },
-        { x: 69.45, y: 68.63 },
-        { x: 85.81, y: 58.87 }
+        { x: 40.77, y: 76},
+        { x: 68.5, y: 69 },
+        { x: 85.1, y: 58.87 }
     ],
 ]
 
@@ -528,9 +530,17 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
 
             let currentAddPos = getAddPos(index, true);
 
+
+            // objectFrontList[index].current.style.transform = 'scale(1.2)'
+            // childColorRefList[index].current.style.transform = 'scale(' + (1.2 * 17) + ')'
+
             movingCenterList[index].current.style.left = initialPosList[index].x + currentAddPos.x + '%'
             movingCenterList[index].current.style.top = initialPosList[index].y + currentAddPos.y + '%'
         })
+
+
+
+
 
         BackSceneList.map((backScene, index) => {
             if (index > 0)
@@ -714,6 +724,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
         movingCenterList[index].current.style.left = pathInfoList[index][currentStep].x + '%'
         movingCenterList[index].current.style.top = pathInfoList[index][currentStep].y + '%'
 
+        parentRef.current.style.zIndex = 10000
         setTimeout(() => {
             rotateCharacter(index);
         }, currentTime * 1000);
@@ -732,6 +743,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
     }
 
     function playAnimation(index) {
+
         // setMuteBG(true)
 
         if (doneList.length == 0 && !isStarted) {
@@ -752,6 +764,8 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
 
         if (index == correctPathList[currentSceneNum]) {
             currentAniNum = randomList[index]
+
+            childColorRefList[index].current.style.opacity = 0.9
             startGame(index)
         }
         else {
@@ -787,48 +801,64 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
         let endPos = isInitial ? pathInfoList[index][0] : pathInfoList[index][currentStep + 1]
 
         movingCenterList[index].current.style.transition = '0s'
-        if (isInitial || currentStep == pathInfoList[index].length - 2) {
-            if (endPos.x < startPos.x) {
-                movingCenterList[index].current.style.transform = 'rotateY(0deg)'
-                addPosX *= -1
-            }
-            else {
+
+        if (isInitial) {
+
+            if (parentPosList[currentSceneNum % 5].r)
                 movingCenterList[index].current.style.transform = 'rotateY(180deg)'
-            }
+            else
+                movingCenterList[index].current.style.transform = 'rotateY(0deg)'
+            // if (endPos.x < startPos.x) {
+            //     movingCenterList[index].current.style.transform = 'rotateY(0deg)'
+            //     addPosX *= -1
+            // }
+            // else {
+            //     
+            // }
 
 
-            if (endPos.y < startPos.y) {
-                addPosY *= -1
+            objectBackList[index].current.className = 'hideObject'
+            objectFrontList[index].current.className = 'commonButton showObject'
 
 
-                objectBackList[index].current.className = 'commonButton showObject'
-                objectFrontList[index].current.className = 'hideObject'
 
-                // characterRef_BList[index].current.play();
-                // characterRef_FList[index].current.pause();
 
-                addPosX *= widthList[randomList[index]].b
-                addPosY *= widthList[randomList[index]].b
-            }
 
-            else {
-                objectBackList[index].current.className = 'hideObject'
-                objectFrontList[index].current.className = 'commonButton showObject'
+            addPosX *= widthList[randomList[index]].f
+            addPosY *= widthList[randomList[index]].f
 
-                // characterRef_FList[index].current.play();
-                // characterRef_BList[index].current.pause();
+            // if (endPos.y < startPos.y) {
+            //     addPosY *= -1
+            //     objectBackList[index].current.className = 'commonButton showObject'
+            //     objectFrontList[index].current.className = 'hideObject'
 
-                addPosX *= widthList[randomList[index]].f
-                addPosY *= widthList[randomList[index]].f
-            }
+            //     // characterRef_BList[index].current.play();
+            //     // characterRef_FList[index].current.pause();
+
+            //     addPosX *= widthList[randomList[index]].b
+            //     addPosY *= widthList[randomList[index]].b
+            // }
+
+            // else {
+
+
+            //     // characterRef_FList[index].current.play();
+            //     // characterRef_BList[index].current.pause();
+
+
+            // }
         }
+
         else {
             addPosX = 0
             addPosY = 0
         }
 
-        if (currentStep == pathInfoList[index].length - 2)
+        if (currentStep == pathInfoList[index].length - 2) {
+            parentRef.current.style.zIndex = 0
             return { x: 0, y: 0 }
+        }
+
         else
             return { x: addPosX, y: addPosY }
     }
@@ -848,7 +878,6 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
             addPosX *= widthList[currentAniNum].f
             addPosY *= widthList[currentAniNum].f
         }
-
 
         let distance =
             Math.sqrt(Math.pow(startPos.x + addPosX - endPos.x, 2)
@@ -949,9 +978,9 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
             ref={baseRef}
             className="aniObject">
             <div
-                onClick={(e) => {
-                    // setPos(e)
-                }}
+                // onClick={(e) => {
+                //     setPos(e)
+                // }}
                 style={{
                     position: "fixed", width: _baseGeo.width + "px",
                     height: _baseGeo.height + "px",
@@ -1105,7 +1134,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                 }}>
 
 
-                                <Lottie
+                                {/* <Lottie
                                     options={returnOption(randomList[index], true)}
                                     mouseDown={false}
                                     isStopped={true}
@@ -1120,7 +1149,7 @@ export default function Scene3({ setFinishGame, _baseGeo, clickedFirst }) {
                                     }}
                                     style={{ transform: 'rotateY(' + (objectList[randomList[index]].bl == false ? '180deg' : '0deg') + ')' }}
                                     url={'recent/' + objectList[randomList[index]].b + '.svg'}
-                                />
+                                /> */}
                             </div>
 
                             <div

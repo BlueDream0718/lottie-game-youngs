@@ -211,8 +211,6 @@ export default function Scene2({ nextFunc, _geo, _baseGeo, setMuteBG }) {
                 </div>
             }
 
-
-
             <div ref={excellentRef}
                 className='hideObject'
             >
