@@ -147,7 +147,7 @@ const widthList = [
 ]
 
 
-let standardSpeed = 10;
+let standardSpeed = 9;
 
 let currentSceneNum = 0;
 
